@@ -1,0 +1,65 @@
+   9 Get-Command                                                                                                   
+  10 Get-Command | measure-object                                                                                  
+  11 Get-Command -Verb Get                                                                                         
+  12 Get-Command -Verb Get | Measure-Object                                                                        
+  13 Get-Process                                                                                                   
+  14 notepad                                                                                                       
+  15 Get-Process notepad                                                                                           
+  16 Get-Process notepad | gm                                                                                      
+  17 Get-Process notepad                                                                                           
+  18 Get-Process edge                                                                                              
+  19 Get-Process *edge*                                                                                            
+  20 Get-Process -Id 732                                                                                           
+  21 Get-Process -Id 732 | gm                                                                                      
+  22 Get-Process                                                                                                   
+  23 Get-Process | gm                                                                                              
+  24 Get-Process | ForEach-Object {$_.ProcessName}                                                                 
+  25 Get-Process | ForEach-Object {if ($_.ProcessName -eq 'Notepad') {$_.Kill()}}                                  
+  26 Get-Process                                                                                                   
+  27 dsa.msc                                                                                                       
+  28 Get-ADUser -Filter "Department -eq 'Marketing'" | measure-object                                              
+  29 Get-ADUser -Filter "Department -eq 'Marketing'" | Select-Object -First 1                                      
+  30 Get-ADUser -Filter "Department -eq 'Marketing'" | Select-Object -First 1 | gm                                 
+  31 Get-ADUser -Filter "Department -eq 'Marketing'" -Properties | Select-Object -First 1 | gm                     
+  32 Get-ADUser -Filter "Department -eq 'Marketing'" -Properties * | Select-Object -First 1 | gm                   
+  33 Get-ADUser -Filter "Department -eq 'Marketing'" -Properties * | Select-Object -First 1                        
+  34 Get-ADOrganizationalUnit -Filter "name -eq 'Users'"                                                           
+  35 Get-ADUser -Filter "Department -eq 'Marketing'" -Properties * | Move-ADObject -TargetPath 'OU=Users,OU=Mark...
+  36 cls                                                                                                           
+  37 Get-Alias                                                                                                     
+  38 notepad                                                                                                       
+  39 Get-Process                                                                                                   
+  40 Get-Process | Where-Object {$_.ProcessName -eq 'Notepad'}                                                     
+  41 Get-Process | ? {$_.ProcessName -eq 'Notepad'}                                                                
+  42 Get-Alias ?                                                                                                   
+  43 Get-Process | % {if ($_.ProcessName -eq 'Notepad') {$_.Kill()}}                                               
+  44 Get-Module                                                                                                    
+  45 Get-ADUser -Filter "Department -eq 'Marketing'" -Properties Department | Measure-Object                       
+  46 Get-ADUser -Filter * -Properties Department | Where-Object {$_.Department -eq 'Marketing'}                    
+  47 Get-ADUser -Filter * -Properties Department | Where-Object {$_.Department -eq 'Marketing'} | Measure-Object   
+  48 Get-ADUser -Filter * -Properties Department | Where-Object {$_.Department -eq 'Marketing'}                    
+  49 Get-ADUser -Filter "Department -eq 'Marketing'" -Properties Department | Measure-Object                       
+  50 Get-ADUser -Filter * -Properties Department | Where-Object {$_.Department -eq 'Marketing'} | Measure-Object   
+  51 Get-ADUser -Filter * | Measure-Object                                                                         
+  52 Measure-Command {Get-ADUser -Filter "Department -eq 'Marketing'" -Properties Department}                      
+  53 Measure-Command {Get-ADUser -Filter * -Properties Department | Where-Object {$_.Department -eq 'Marketing'}}  
+  54 327\64                                                                                                        
+  55 327/64                                                                                                        
+  56 Get-ADUser -Filter * -Properties Department, mail | Select-Object SamAccountName, mail, Department            
+  57 Get-ADUser -Filter * -Properties Department, mail | Select-Object SamAccountName, mail, Department | Export...
+  58 cd C:\Users\Public\                                                                                           
+  59 dir                                                                                                           
+  60 notepad .\AdEmailDepartmentUser.csv                                                                           
+  61 Remove-Item .\AdEmailDepartmentUser.csv                                                                       
+  62 Get-ADUser -Filter * -Properties Department, mail | Select-Object SamAccountName, mail, Department | Export...
+  63 notepad .\AdEmailDepartmentUser.csv                                                                           
+  64 Get-ADUser -Filter * -Properties Department, mail | Select-Object SamAccountName, mail, Department | Out-Gr...
+  65 Get-ADUser -Filter * -Properties Department | Group-Object Department                                         
+  66 Get-ADUser -Filter "department -eq 'Markting'" | Set-ADUser -Department 'Marketing'                           
+  67 Get-ADUser -Filter * -Properties Department | Group-Object Department                                         
+  68 Get-Command user                                                                                              
+  69 Get-Command *user*                                                                                            
+  70 Get-Command *user* -Module ActiveDirectory                                                                    
+  71 Update-Help                                                                                                   
+  72 Get-Help Get-ADUser                                                                                           
+  73 Get-Help Get-ADUser -Detailed                                                                                     
